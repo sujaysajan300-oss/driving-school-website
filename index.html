@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DriveSmart NZ | Driving School</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #38bdf8;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #38bdf8;
+      color: #082f49;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .button:hover {
+      background: white;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 40px;
+      color: #111827;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #1e3a8a;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      color: #0284c7;
+    }
+
+    .why {
+      background: #e0f2fe;
+    }
+
+    .contact {
+      text-align: center;
+      background: #111827;
+      color: white;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin: 10px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input,
+    textarea {
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      background: #38bdf8;
+      color: #082f49;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 5px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">Drive<span>Smart</span> NZ</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#prices">Prices</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Learn to Drive with <span>Confidence</span></h1>
+
+      <p>
+        Professional driving lessons designed to help you become a safe,
+        confident and responsible driver.
+      </p>
+
+      <a href="#lessons" class="button">View Lessons</a>
+      <a href="#contact" class="button">Book a Lesson</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About DriveSmart NZ</h2>
+
+    <div class="about">
+      <p>
+        Welcome to DriveSmart NZ. We provide friendly and professional
+        driving lessons for learners who want to build their confidence
+        and develop safe driving skills.
+      </p>
+
+      <br>
+
+      <p>
+        Our lessons focus on practical driving skills, road safety,
+        parking, traffic awareness and preparation for your driving test.
+      </p>
+    </div>
+  </section>
+
+  <!-- Lessons -->
+  <section id="lessons">
+    <h2>Our Driving Lessons</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🚗 Beginner Lessons</h3>
+        <p>
+          Perfect for new drivers who are learning the basics of driving.
+        </p>
+        <a href="#contact" class="button">Book Now</a>
+      </div>
+
+      <div class="card">
+        <h3>🛣️ Road Skills</h3>
+        <p>
+          Improve your confidence with real-world traffic and road situations.
+        </p>
+        <a href="#contact" class="button">Book Now</a>
+      </div>
+
+      <div class="card">
+        <h3>🎯 Test Preparation</h3>
+        <p>
+          Practice the skills you need to prepare for your driving test.
+        </p>
+        <a href="#contact" class="button">Book Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Prices -->
+  <section id="prices">
+    <h2>Our Prices</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Single Lesson</h3>
+        <p class="price">$60</p>
+        <p>1 hour driving lesson</p>
+        <a href="#contact" class="button">Choose</a>
+      </div>
+
+      <div class="card">
+        <h3>5 Lessons</h3>
+        <p class="price">$280</p>
+        <p>Five 1-hour lessons</p>
+        <a href="#contact" class="button">Choose</a>
+      </div>
+
+      <div class="card">
+        <h3>10 Lessons</h3>
+        <p class="price">$540</p>
+        <p>Ten 1-hour lessons</p>
+        <a href="#contact" class="button">Choose</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why">
+    <h2>Why Choose Us?</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>✅ Friendly</h3>
+        <p>Patient and supportive lessons.</p>
+      </div>
+
+      <div class="card">
+        <h3>🛡️ Safety First</h3>
+        <p>We focus on safe and responsible driving.</p>
+      </div>
+
+      <div class="card">
+        <h3>⭐ Professional</h3>
+        <p>Structured lessons for learners at different levels.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Book a Driving Lesson</h2>
+
+    <p>Ready to start learning?</p>
+    <p>Fill in the form below and we'll get back to you.</p>
+
+    <form onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Your name" required>
+
+      <input type="email" placeholder="Your email" required>
+
+      <input type="tel" placeholder="Your phone number" required>
+
+      <textarea placeholder="Tell us what type of lesson you need..." required></textarea>
+
+      <button type="submit">Send Booking Request</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 DriveSmart NZ. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+
+      alert(
+        "Thank you! Your booking request has been received."
+      );
+    }
+  </script>
+
+</body>
+</html>
