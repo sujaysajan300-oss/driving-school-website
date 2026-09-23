@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DriveSmart NZ | Professional Driving Lessons</title>
+
+<meta name="description" content="Professional driving lessons and test preparation in New Zealand.">
+
+<style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #172033;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #e8ebf0;
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #101828;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: 600;
+    color: #344054;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}
+
+.nav-button {
+    background: #e63946;
+    color: white !important;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+.menu-button {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        linear-gradient(135deg, #101828 0%, #1d2939 100%);
+    color: white;
+    padding: 110px 0;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 14px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: #ff5964;
+}
+
+.hero p {
+    font-size: 19px;
+    color: #d0d5dd;
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 23px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #e63946;
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background: #d62839;
+}
+
+.btn-secondary {
+    border: 1px solid #667085;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #101828;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    background: #f8fafc;
+    padding: 30px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 28px;
+    color: #101828;
+}
+
+.stat span {
+    color: #667085;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-title span {
+    color: #e63946;
+    font-weight: 700;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #667085;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-box {
+    background: #f8fafc;
+    padding: 35px;
+    border-radius: 16px;
+}
+
+.about-box h3 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.about-box p {
+    color: #667085;
+    margin-bottom: 15px;
+}
+
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    margin: 12px 0;
+    font-weight: 600;
+}
+
+.check-list li::before {
+    content: "✓";
+    color: #e63946;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+/* =========================
+   LESSONS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    border: 1px solid #eaecf0;
+    border-radius: 16px;
+    padding: 30px;
+    background: white;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(16,24,40,0.1);
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: #fff1f2;
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #667085;
+}
+
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing {
+    background: #f8fafc;
+}
+
+.price-card {
+    position: relative;
+}
+
+.price {
+    font-size: 38px;
+    font-weight: 800;
+    margin: 18px 0;
+}
+
+.price small {
+    font-size: 15px;
+    color: #667085;
+    font-weight: normal;
+}
+
+.price-list {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.price-list li {
+    margin: 12px 0;
+    color: #475467;
+}
+
+.price-list li::before {
+    content: "✓";
+    color: #e63946;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.featured {
+    border: 2px solid #e63946;
+}
+
+.popular {
+    position: absolute;
+    top: -14px;
+    right: 20px;
+    background: #e63946;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+.review {
+    background: #101828;
+    color: white;
+}
+
+.review .section-title p {
+    color: #d0d5dd;
+}
+
+.review-card {
+    background: #1d2939;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.stars {
+    color: #fbbf24;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    color: #d0d5dd;
+    margin-bottom: 20px;
+}
+
+.reviewer {
+    font-weight: bold;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #667085;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin: 18px 0;
+}
+
+.contact-item strong {
+    display: block;
+}
+
+.form {
+    background: #f8fafc;
+    padding: 35px;
+    border-radius: 16px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #101828;
+    color: white;
+    padding: 50px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+footer h3 {
+    margin-bottom: 12px;
+}
+
+footer p,
+footer li {
+    color: #98a2b3;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 8px 0;
+}
+
+.copyright {
+    border-top: 1px solid #344054;
+    padding-top: 20px;
+    text-align: center;
+    color: #98a2b3;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 25px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .stats-grid,
+    .cards,
+    .about-grid,
+    .booking-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#" class="logo">
+Drive<span>Smart</span> NZ
+</a>
+
+<div class="menu-button" onclick="toggleMenu()">
+☰
+</div>
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#lessons">Lessons</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact" class="nav-button">Book a Lesson</a></li>
+
+</ul>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="badge">
+🚗 Professional Driving Lessons
+</div>
+
+<h1>
+Learn to drive with <span>confidence.</span>
+</h1>
+
+<p>
+Professional driving lessons designed to help learners develop safe,
+confident and responsible driving skills.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn btn-primary">
+Book a Lesson
+</a>
+
+<a href="#lessons" class="btn btn-secondary">
+View Lessons
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>1-on-1</strong>
+<span>Personal Lessons</span>
+</div>
+
+<div class="stat">
+<strong>Flexible</strong>
+<span>Lesson Times</span>
+</div>
+
+<div class="stat">
+<strong>Modern</strong>
+<span>Learning Approach</span>
+</div>
+
+<div class="stat">
+<strong>NZ</strong>
+<span>Driving Focus</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>ABOUT US</span>
+
+<h2>Learn from the road, not just a textbook.</h2>
+
+<p>
+Our lessons focus on practical skills, road awareness and building
+confidence behind the wheel.
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+<div class="about-box">
+
+<h3>Driving lessons made simple.</h3>
+
+<p>
+Every learner is different. Lessons can be adapted to your current
+experience and learning goals.
+</p>
+
+<p>
+From your first time behind the wheel to preparing for your practical
+driving test, we focus on developing safe driving habits.
+</p>
+
+</div>
+
+
+<div>
+
+<ul class="check-list">
+
+<li>Personalised one-on-one lessons</li>
+
+<li>Practical road experience</li>
+
+<li>Driving test preparation</li>
+
+<li>Parking and manoeuvring practice</li>
+
+<li>Road safety education</li>
+
+<li>Flexible lesson options</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     LESSONS
+========================= -->
+
+<section id="lessons">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>OUR LESSONS</span>
+
+<h2>Choose the lesson that suits you.</h2>
+
+<p>
+Flexible options for learners at different stages.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">🚗</div>
+
+<h3>Beginner Lessons</h3>
+
+<p>
+Perfect for learners starting from the beginning.
+Learn vehicle control, basic road rules and safe driving habits.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🛣️</div>
+
+<h3>Road Skills</h3>
+
+<p>
+Build confidence with intersections, lane changes,
+parking, traffic awareness and real-world driving.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📝</div>
+
+<h3>Test Preparation</h3>
+
+<p>
+Practise the skills and situations you may encounter
+during your practical driving test.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PRICING
+========================= -->
+
+<section class="pricing" id="pricing">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>PRICING</span>
+
+<h2>Simple lesson packages.</h2>
+
+<p>
+Example pricing — replace these prices with your customer's actual prices.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card price-card">
+
+<h3>Single Lesson</h3>
+
+<div class="price">
+$60 <small>/ lesson</small>
+</div>
+
+<ul class="price-list">
+
+<li>60-minute lesson</li>
+<li>One-on-one instruction</li>
+<li>Personalised feedback</li>
+
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+Book Now
+</a>
+
+</div>
+
+
+<div class="card price-card featured">
+
+<div class="popular">
+POPULAR
+</div>
+
+<h3>5 Lesson Package</h3>
+
+<div class="price">
+$280
+</div>
+
+<ul class="price-list">
+
+<li>5 driving lessons</li>
+<li>Personalised learning</li>
+<li>Progress feedback</li>
+
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+Book Now
+</a>
+
+</div>
+
+
+<div class="card price-card">
+
+<h3>10 Lesson Package</h3>
+
+<div class="price">
+$540
+</div>
+
+<ul class="price-list">
+
+<li>10 driving lessons</li>
+<li>Progress tracking</li>
+<li>Test preparation</li>
+
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+Book Now
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     REVIEWS
+========================= -->
+
+<section class="review">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>REVIEWS</span>
+
+<h2>What our learners say.</h2>
+
+<p>
+Example reviews for the demo website. Replace these with genuine
+customer reviews if the business provides them.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Great experience. The lessons were easy to understand and helped me
+feel much more comfortable on the road."
+</p>
+
+<div class="reviewer">
+— Example Learner
+</div>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"The lessons were clear, practical and focused on the areas I needed
+to improve."
+</p>
+
+<div class="reviewer">
+— Example Learner
+</div>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Professional and friendly lessons with useful feedback after every
+session."
+</p>
+
+<div class="reviewer">
+— Example Learner
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT / BOOKING
+========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="booking-grid">
+
+
+<div class="contact-info">
+
+<h3>Ready to start?</h3>
+
+<p>
+Send us a booking request and we'll get back to you.
+</p>
+
+
+<div class="contact-item">
+
+<strong>📞 Phone</strong>
+
+<p>021 123 4567</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>📧 Email</strong>
+
+<p>hello@drivesmart.co.nz</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>📍 Location</strong>
+
+<p>Auckland, New Zealand</p>
+
+</div>
+
+</div>
+
+
+<div class="form">
+
+<form onsubmit="submitForm(event)">
+
+<div class="form-group">
+
+<label for="name">Full Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Your name"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="phone">Phone Number</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="021 123 4567"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="lesson">Lesson Type</label>
+
+<select id="lesson" required>
+
+<option value="">Choose a lesson</option>
+
+<option>Beginner Lesson</option>
+
+<option>Road Skills</option>
+
+<option>Test Preparation</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="message">Message</label>
+
+<textarea
+id="message"
+placeholder="Tell us what you need help with..."
+></textarea>
+
+</div>
+
+
+<button class="btn btn-primary" type="submit">
+Send Booking Request
+</button>
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3 class="logo">
+Drive<span>Smart</span> NZ
+</h3>
+
+<p>
+Professional driving lessons focused on safe,
+confident and responsible driving.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#lessons">Lessons</a></li>
+
+<li><a href="#pricing">Pricing</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<ul>
+
+<li>021 123 4567</li>
+
+<li>hello@drivesmart.co.nz</li>
+
+<li>Auckland, NZ</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 DriveSmart NZ. Demo website.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* Mobile menu */
+
+function toggleMenu() {
+
+    document
+        .getElementById("navLinks")
+        .classList
+        .toggle("active");
+
+}
+
+
+/* Demo booking form */
+
+function submitForm(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    alert(
+        "Thanks, " + name +
+        "! Your booking request has been received."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
